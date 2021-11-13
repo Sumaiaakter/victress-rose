@@ -20,7 +20,7 @@ const AddReview = () => {
 
     return (
         <Container >
-            <Typography className='apartment' variant="h4" sx={{ color: 'info.main', mb: 3 }}>Please Add Services </Typography>
+            <Typography className='apartment' variant="h4" sx={{ color: 'info.main', mb: 3 }}>Please Add Review </Typography>
 
 
             <Grid className="container" container spacing={2}>

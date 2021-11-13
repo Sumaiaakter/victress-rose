@@ -1,9 +1,13 @@
 import React from 'react';
+import AddServices from '../../Home/AddServices/AddServices';
+import Header from '../../Shared/Header/Header';
 
 const AddApartment = () => {
     return (
         <div>
-            <h2>add apartment</h2>
+            <Header></Header>
+            <AddServices></AddServices>
+
         </div>
     );
 };

@@ -7,9 +7,11 @@ import { Box } from '@mui/system';
 import Banner from '../Home/Banner/Banner';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
+import AvailableApartment from '../Apartment/AvailableApartment/AvailableApartment';
 
 
 const About = () => {
+    const [date,] = React.useState(new Date());
     return (
 
         <Box sx={{ flexGrow: 1 }}>
@@ -17,7 +19,7 @@ const About = () => {
             <Container>
                 <Banner></Banner>
 
-                <Services></Services>
+                <AvailableApartment date={date}></AvailableApartment>
             </Container>
             <Footer></Footer>
         </Box>

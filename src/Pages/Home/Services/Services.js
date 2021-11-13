@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
+import Banner from '../Banner/Banner';
 
 
 
@@ -32,6 +33,7 @@ const Services = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <Header></Header>
+            <Banner></Banner>
             <Container>
                 <Typography className="service" sx={{ fontWeight: 500, m: 2, color: 'success.main' }} variant="h6" component="div">
                     OUR SERVICES:{services.length}
