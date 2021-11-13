@@ -49,11 +49,16 @@ function Dashboard(props) {
 
             <Link style={{ textDecoration: 'none', }} to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
             <Divider />
-            <Link style={{ textDecoration: 'none', }} to={`${url}/review`}><Button color="inherit">Review</Button></Link>
+            {/* <Link style={{ textDecoration: 'none', }} to={`${url}/review`}><Button color="inherit">Review</Button></Link>
             <Divider />
             <Link style={{ textDecoration: 'none', }} to={`${url}/addReview`}><Button color="inherit">Add Review</Button></Link>
-            <Divider />
+            <Divider /> */}
+            {/* //----------------------------------- */}
+            <Link style={{ textDecoration: 'none', }} to={`${url}/makeAdmin`}><Button color="inherit">Add Admin</Button></Link>
 
+            <Link style={{ textDecoration: 'none', }} to={`${url}/addApartment`}><Button color="inherit">Add Apartment</Button></Link>
+
+            {/* --------------------------------------------- */}
             {addAdmin && <Box>
                 <Link style={{ textDecoration: 'none', }} to={`${url}/makeAdmin`}><Button color="inherit">Add Admin</Button></Link>
 
@@ -138,10 +143,10 @@ function Dashboard(props) {
                     <Route exact path={`${path}/review`}>
                         <Review></Review>
                     </Route>
-                    <AdminRoute exact path={`${path}/makeAdmin`}>
+                    <AdminRoute path={`${path}/makeAdmin`}>
                         <Admin></Admin>
                     </AdminRoute>
-                    <AdminRoute exact path={`${path}/addApartment`}>
+                    <AdminRoute path={`${path}/addApartment`}>
                         <AddApartment></AddApartment>
                     </AdminRoute>
 
