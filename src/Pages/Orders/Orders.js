@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 const Orders = () => {
     const [orders, setOrders] = useState([])
+    console.log(orders)
     useEffect(() => {
         fetch('/apartments.json')
             .then(res => res.json())

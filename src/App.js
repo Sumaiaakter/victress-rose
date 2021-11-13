@@ -41,12 +41,12 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
-            {/* <Route exact path="/review">
+            <Route exact path="/review">
               <Review></Review>
             </Route>
             <Route exact path="/addReview">
               <AddReview></AddReview>
-            </Route> */}
+            </Route>
             <Route exact path="/register">
               <Register></Register>
             </Route>
