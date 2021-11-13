@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 
 const bannerBg = {
     marginTop: '20px',
-    backgroundColor: 'salmon',
+    backgroundColor: 'black',
 
 }
 
@@ -27,13 +27,12 @@ const Banner = () => {
                 <Grid item style={{ ...verticalCenter, textAlign: 'left' }} xs={12} md={6}>
                     <Box>
                         <Typography style={{ color: 'white' }} variant="h3">
-                            Your New Smile <br />
-                            Starts Here
+                            Dream as if you'll live forever. <br /> Live as if you'll die today.
                         </Typography>
-                        <Typography variant="h6" sx={{ my: 3, fontSize: 13, fontWeight: 300, color: 'gray' }}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil asperiores velit illum enim incidunt doloremque vitae impedit at accusantium tenetur.
+                        <Typography variant="h6" sx={{ my: 3, fontSize: 13, fontWeight: 300, color: 'white' }}>
+                            Being a good actor isn't easy. Being a man is even harder. I want to be both before I'm done.
                         </Typography>
-                        <Button variant="contained" style={{ backgroundColor: '#5CE7ED' }}>Get Appointment</Button>
+                        <Button variant="contained" style={{ backgroundColor: 'primary.main' }}>Get Appointment</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} style={verticalCenter} >

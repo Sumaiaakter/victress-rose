@@ -31,9 +31,9 @@ const Header = () => {
                     </Typography>
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/apartment"><Button color="inherit">Apartment</Button></Link>
                     <Link style={{ textDecoration: 'none', color: 'white' }} to="/services"><Button color="inherit">Services</Button></Link>
-
-                    <Typography color="inherit"></Typography>
-
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/addServices"><Button color="inherit">Add Services</Button></Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/orders"><Button color="inherit">My Orders</Button></Link>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to="/about"><Button color="inherit">About</Button></Link>
 
                     {user?.email ?
 
@@ -45,9 +45,6 @@ const Header = () => {
                                 <div className="text-center">
                                     <h6>{displayName}</h6>
 
-                                    <button onClick={logOut} className="btn btn-primary">
-                                        Sign Out
-                                    </button>
                                 </div>
                             </Grid>
 

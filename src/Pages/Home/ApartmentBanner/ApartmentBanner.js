@@ -39,7 +39,7 @@ const ApartmentBanner = () => {
                                 Make Your Booking Today
                             </Typography>
                             <Typography variant="h6" sx={{ my: 5 }} style={{ color: 'black', fontSize: 14, fontWeight: 300 }}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi facere totam aliquam praesentium vel. Amet veniam odio vero doloremque laborum.
+                                Dream as if you'll live forever. <br /> Live as if you'll die today.
                             </Typography>
                             <Button variant="contained" >Learn More</Button>
                         </Box>

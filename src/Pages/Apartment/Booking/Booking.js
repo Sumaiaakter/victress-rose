@@ -1,21 +1,30 @@
 import { Grid } from '@mui/material';
 import React from 'react';
+import Rating from 'react-rating';
 import Paper from '@mui/material/Paper';
 import BookingModal from '../BookingModal/BookingModal';
 import Typography from '@mui/material/Typography';
+import './Booking.css'
 import Button from '@mui/material/Button';
+
+
 const Booking = ({ booking, date, setBookingSuccess }) => {
 
-    const { name, space, time, price, desc, rating } = booking;
+    const { name, space, time, price, desc, rating, img } = booking;
 
     const [openBooking, setBookingOpen] = React.useState(false);
     const handleBookingOpen = () => setBookingOpen(true);
     const handleBookingClose = () => setBookingOpen(false);
 
+
+
     return (
         <>
             <Grid item xs={12} sm={6} md={4}>
                 <Paper elevation={3} sx={{ p: 5, m: 'auto' }}>
+                    <Typography variant="h5" gutterBottom component="div">
+                        <img style={{ width: '100%' }} src={img} alt="" />
+                    </Typography>
                     <Typography sx={{ color: 'info.main', fontWeight: 600 }} variant="h5" gutterBottom component="div">
                         {name}
                     </Typography>
@@ -23,7 +32,14 @@ const Booking = ({ booking, date, setBookingSuccess }) => {
                         Price: {price}
                     </Typography>
                     <Typography sx={{ color: 'info.main', fontWeight: 400 }} variant="h6" gutterBottom component="div">
-                        Rating: {rating}
+                        <Rating
+                            initialRating={rating}
+                            readonly
+                            emptySymbol="far fa-star icon-color"
+                            fullSymbol="fas fa-star icon-color"
+
+                        />
+
                     </Typography>
                     <Typography sx={{ color: 'info.main', fontWeight: 400 }} variant="h6" gutterBottom component="div">
                         {desc}

@@ -21,9 +21,11 @@ import {
 } from "react-router-dom";
 import DashboardHome from '../DashboardHome/DashboardHome';
 import Admin from '../Admin/Admin';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddApartment from '../AddApartment/AddApartment';
 import useAuth from '../../../hooks/useAuth';
-import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import AddReview from '../../AddReview/AddReview';
+import Review from '../../Home/Review/Review';
 
 
 
@@ -33,7 +35,7 @@ function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    const { admin } = useAuth();
+    const { addAdmin } = useAuth();
     let { path, url } = useRouteMatch();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -47,8 +49,12 @@ function Dashboard(props) {
 
             <Link style={{ textDecoration: 'none', }} to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
             <Divider />
+            <Link style={{ textDecoration: 'none', }} to={`${url}/review`}><Button color="inherit">Review</Button></Link>
+            <Divider />
+            <Link style={{ textDecoration: 'none', }} to={`${url}/addReview`}><Button color="inherit">Add Review</Button></Link>
+            <Divider />
 
-            {admin && <Box>
+            {addAdmin && <Box>
                 <Link style={{ textDecoration: 'none', }} to={`${url}/makeAdmin`}><Button color="inherit">Add Admin</Button></Link>
 
                 <Link style={{ textDecoration: 'none', }} to={`${url}/addApartment`}><Button color="inherit">Add Apartment</Button></Link>
@@ -126,10 +132,16 @@ function Dashboard(props) {
                     <Route exact path={path}>
                         <DashboardHome></DashboardHome>
                     </Route>
-                    <AdminRoute path={`${path}/makeAdmin`}>
+                    <Route exact path={`${path}/addReview`}>
+                        <AddReview></AddReview>
+                    </Route>
+                    <Route exact path={`${path}/review`}>
+                        <Review></Review>
+                    </Route>
+                    <AdminRoute exact path={`${path}/makeAdmin`}>
                         <Admin></Admin>
                     </AdminRoute>
-                    <AdminRoute path={`${path}/addApartment`}>
+                    <AdminRoute exact path={`${path}/addApartment`}>
                         <AddApartment></AddApartment>
                     </AdminRoute>
 
