@@ -15,7 +15,7 @@ const Apartments = ({ date }) => {
     const [apartments, setApartments] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/apartments?email=${user.email}&date=${date}`
+        const url = `https://desolate-beyond-86715.herokuapp.com/apartments?email=${user.email}&date=${date}`
         fetch(url)
             .then(res => res.json())
             .then(data => setApartments(data));

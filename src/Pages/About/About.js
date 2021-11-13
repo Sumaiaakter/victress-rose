@@ -6,13 +6,14 @@ import { Box } from '@mui/system';
 
 import Banner from '../Home/Banner/Banner';
 import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
 
 
 const About = () => {
     return (
 
         <Box sx={{ flexGrow: 1 }}>
-
+            <Header></Header>
             <Container>
                 <Banner></Banner>
 

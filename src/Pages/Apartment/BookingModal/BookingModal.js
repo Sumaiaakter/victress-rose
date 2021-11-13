@@ -51,7 +51,7 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
         }
         console.log(apartment)
         //send data to the server
-        fetch('http://localhost:5000/apartments', {
+        fetch('https://desolate-beyond-86715.herokuapp.com/apartments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const Apartment = () => {
     const [date, setDate] = React.useState(new Date());
     return (
         <div>
-            <Header></Header>
+
 
             <ApartmentHeader date={date} setDate={setDate}></ApartmentHeader>
 

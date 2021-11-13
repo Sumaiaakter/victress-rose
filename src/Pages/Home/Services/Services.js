@@ -21,7 +21,7 @@ const Services = () => {
 
     //------------------------//
     useEffect(() => {
-        fetch("http://localhost:5000/allServices")
+        fetch("https://desolate-beyond-86715.herokuapp.com/allServices")
             .then((res) => res.json())
             .then((data) => setServices(data));
     }, []);

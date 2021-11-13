@@ -13,7 +13,7 @@ const Details = () => {
     console.log(detailsId)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleDetails/${detailsId}`)
+        fetch(`https://desolate-beyond-86715.herokuapp.com/singleDetails/${detailsId}`)
             .then(res => res.json())
             .then(data => {
                 setDetails(data);
